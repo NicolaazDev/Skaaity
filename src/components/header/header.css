@@ -1,0 +1,32 @@
+.nav-icon {
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  border-radius: 50%;
+
+  border: 1px solid var(--accent);
+
+  padding: 4px;
+  color: var(--foreground);
+}
+
+.separator {
+  width: 1px;
+  height: 45px;
+  background-color: var(--accent);
+  margin: 0 6px;
+}
+
+.user-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+  cursor: pointer;
+  color: var(--foreground);
+
+  span {
+    font-size: 14px;
+  }
+}
