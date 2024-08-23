@@ -64,3 +64,12 @@
   font-display: swap;
   font-style: normal;
 }
+
+/* Street */
+
+@font-face {
+  font-family: "Street";
+  src: url("../../public/fonts/Street/street.otf");
+  font-display: swap;
+  font-style: normal;
+}

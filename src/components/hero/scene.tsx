@@ -5,13 +5,16 @@ import { Canvas } from "@react-three/fiber";
 import { Stage } from "@react-three/drei";
 
 import { Model } from "@/components/hero/model";
+import HtmlText from "./text";
 
 const initialRotation = -1.6;
 const rotationSpeed = 500; // 1000 = 1 second
 const maxRotation = 1.6;
+const maxScroll = 1000;
 
 const ThreeScene = () => {
   const [rotation, setRotation] = useState(initialRotation);
+  const [positionX, setPositionX] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,6 +26,11 @@ const ThreeScene = () => {
       }
 
       setRotation(newRotation);
+
+      let newPositionX = (scrollPosition / maxScroll) * 100;
+      if (newPositionX > 4000) newPositionX = 4000;
+
+      setPositionX(newPositionX);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -30,6 +38,10 @@ const ThreeScene = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  useEffect(() => {
+    console.log(positionX);
+  }, [positionX]);
 
   return (
     <div className="fixed top-0 w-[100vw] h-[100vh] left-0">
@@ -53,6 +65,7 @@ const ThreeScene = () => {
             center={{ precise: true }}
             adjustCamera={false}
           >
+            <HtmlText positionX={positionX} />
             <Model position={[0, 0, 0]} rotation={[0, rotation, 0]} />
           </Stage>
         </Suspense>
