@@ -1,4 +1,9 @@
-import React, { forwardRef, ComponentPropsWithRef, useRef } from "react";
+import React, {
+  forwardRef,
+  ComponentPropsWithRef,
+  useRef,
+  useEffect,
+} from "react";
 import { useGLTF } from "@react-three/drei";
 import * as THREE from "three";
 
@@ -12,5 +17,22 @@ export const Model = forwardRef<HTMLDivElement, ModelProps>((props) => {
 
   const mesh = useRef<THREE.Object3D>();
 
-  return <primitive object={scene} ref={mesh} {...props} />;
+  useEffect(() => {
+    scene.traverse((child) => {
+      if (child instanceof THREE.Mesh) {
+        child.castShadow = false;
+        child.receiveShadow = false;
+      }
+    });
+  }, [scene]);
+
+  return (
+    <primitive
+      castShadow={false}
+      receiveShadow={false}
+      object={scene}
+      ref={mesh}
+      {...props}
+    />
+  );
 });

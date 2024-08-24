@@ -8,8 +8,8 @@ import { Model } from "@/components/hero/model";
 import HtmlText from "./text";
 
 const initialRotation = -1.6;
-const rotationSpeed = 500; // 1000 = 1 second
-const maxRotation = 1.6;
+const rotationSpeed = 500; // 1000 = 1 second, 500 = 0.5 second ...
+const maxRotation = 5;
 const maxScroll = 1000;
 
 const ThreeScene = () => {
@@ -66,7 +66,10 @@ const ThreeScene = () => {
             adjustCamera={false}
           >
             <HtmlText positionX={positionX} />
-            <Model position={[0, 0, 0]} rotation={[0, rotation, 0]} />
+            <Model
+              position={[0, 0, 0]}
+              rotation={[rotation, rotation, rotation]}
+            />
           </Stage>
         </Suspense>
       </Canvas>

@@ -11,7 +11,7 @@ export default function HtmlText({ positionX }: HtmlTextProps) {
       <div className="w-[100vw] h-full font-street text-[30vh] center-col leading-[1] whitespace-nowrap">
         <span
           style={{
-            transform: `translateX(${positionX * 10}px)`,
+            transform: `translateX(${positionX * 6}px)`,
           }}
           className="span-text center !justify-end"
         >
@@ -19,7 +19,7 @@ export default function HtmlText({ positionX }: HtmlTextProps) {
         </span>
         <span
           style={{
-            transform: `translateX(-${positionX * 10}px)`,
+            transform: `translateX(-${positionX * 6}px)`,
           }}
           className="span-text"
         >
