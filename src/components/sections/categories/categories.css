@@ -6,7 +6,9 @@
   } */
 
   .grid-item {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); */
+    overflow: hidden;
+    position: relative;
 
     &:hover {
       @apply border-primary;
@@ -21,7 +23,7 @@
     }
 
     img {
-      @apply !absolute top-[50%] left-[50%] translate-x-[-50%] rotate-90 h-[200px] scale-[4.5] -z-10;
+      @apply !absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[100%] h-[200px] scale-[4.5];
     }
   }
 }

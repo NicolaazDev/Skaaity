@@ -23,11 +23,31 @@
     display: inline-block;
   }
 
+  .secondarytext-gradient {
+    background: radial-gradient(
+      circle,
+      var(--popover-foreground),
+      var(--foreground)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+
   .main-gradient {
     background: radial-gradient(
       circle,
       var(--primary-foreground),
       var(--primary)
+    );
+  }
+
+  .secondary-gradient {
+    background: radial-gradient(
+      circle,
+      var(--popover-foreground),
+      var(--foreground)
     );
   }
 }
