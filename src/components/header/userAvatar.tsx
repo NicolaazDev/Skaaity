@@ -78,10 +78,10 @@ export default function UserAvatar() {
   if (!session) {
     return (
       <Link
-        className=" bg-foreground text-background font-poppinsLight center rounded-[8px] w-[100px]"
+        className="main-gradient text-background font-poppinsLight center rounded-[8px] w-[140px]"
         href="/auth"
       >
-        Entrar
+        Login
       </Link>
     );
   }

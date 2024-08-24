@@ -13,6 +13,23 @@
   .center-col {
     @apply flex flex-col items-center justify-center;
   }
+
+  .text-gradient {
+    background: radial-gradient(circle, var(--primary), var(--ring));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+  }
+
+  .main-gradient {
+    background: radial-gradient(
+      circle,
+      var(--primary-foreground),
+      var(--primary)
+    );
+  }
 }
 
 @layer base {

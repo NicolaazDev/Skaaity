@@ -10,7 +10,7 @@ export default function Home() {
     <main>
       <Header />
       <Hero />
-      <div className="relative -mt-[30vh] z-[99999999999] px-3 bg-background">
+      <div className="relative layout -mt-[30vh] z-[99999999999] px-3 bg-background">
         <Categories />
       </div>
       <CookiesAllow />

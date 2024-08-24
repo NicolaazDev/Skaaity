@@ -1,0 +1,27 @@
+@tailwind utilities;
+
+@layer utilities {
+  /* .layout {
+    box-shadow: 1px -20px 14px 2px white;
+  } */
+
+  .grid-item {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+
+    &:hover {
+      @apply border-primary;
+    }
+  }
+
+  .category-first {
+    @apply col-span-1 row-span-2 relative;
+
+    .content {
+      @apply absolute top-0;
+    }
+
+    img {
+      @apply !absolute top-[50%] left-[50%] translate-x-[-50%] rotate-90 h-[200px] scale-[4.5] -z-10;
+    }
+  }
+}

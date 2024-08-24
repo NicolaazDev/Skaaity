@@ -14,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className="font-poppinsMedium">
+      <body className="font-poppinsMedium overflow-x-hidden">
         <SessionProvider>{children}</SessionProvider>
       </body>
     </html>
