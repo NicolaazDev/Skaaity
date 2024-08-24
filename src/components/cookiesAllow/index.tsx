@@ -32,7 +32,7 @@ export default function CookiesAllow() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 20 }}
           transition={{ duration: 0.5 }}
-          className="fixed bottom-3 right-3 bg-background text-foreground rounded-[10px] bg-gray-300 z-20 p-4 flex items-center justify-between"
+          className="fixed bottom-3 right-3  bg-background text-foreground rounded-[10px] bg-gray-300 z-[999999999999]  p-4 flex items-center justify-between"
         >
           <CookieIcon
             className="mx-3 rounded-[50%] bg-gray-400 p-1"

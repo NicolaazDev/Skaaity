@@ -4,7 +4,7 @@ import "./hero.css";
 
 export default function Hero() {
   return (
-    <div className="w-full h-[300vh]">
+    <div className="w-full h-[300vh] ">
       <Scene />
     </div>
   );

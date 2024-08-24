@@ -1,3 +1,6 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import "./header.css";
 
@@ -6,8 +9,36 @@ import CartButton from "@/components/header/cartButton";
 import UserAvatar from "@/components/header/userAvatar";
 
 export default function Header() {
+  const [showHeader, setShowHeader] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  const handleScroll = () => {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY > lastScrollY && currentScrollY > 100) {
+      // Scroll para baixo
+      setShowHeader(false);
+    } else {
+      // Scroll para cima
+      setShowHeader(true);
+    }
+
+    setLastScrollY(currentScrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollY]);
+
   return (
-    <header className="bg-transparent fixed top-0 h-[80px] w-full !justify-between px-8 center">
+    <header
+      className={`fixed top-0 h-[80px] z-[99999999] bg-background w-full !justify-between px-8 center transition-transform duration-300 ${
+        showHeader ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
       <Link href="/">
         <img
           className="h-[70px] w-[100px] object-contain"
