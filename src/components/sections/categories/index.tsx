@@ -4,8 +4,8 @@ import "./categories.css";
 
 export default function Categories() {
   return (
-    <section className="w-full py-[10vh] bg-background relative mx-auto px-4 ">
-      <h2 className="text-7xl text-gradient font-[400] leading-[1.2] text-center w-full font-poppinsBold">
+    <section className="w-full py-[10vh] bg-background relative mx-auto px-4 center-col">
+      <h2 className="text-7xl text-gradient font-[400] leading-[1.2] text-center w-auto font-poppinsBold">
         Produtos
       </h2>
       <p className="font-poppinsLight leading-[2.5] text-center w-full">

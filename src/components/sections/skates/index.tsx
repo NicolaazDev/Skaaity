@@ -1,5 +1,4 @@
-import { skateboards } from "@/data/boards"; // Assumindo que o array de skateboards está nesse caminho
-import "./boards.css";
+import { boards as skateboards } from "@/data/boards";
 
 import {
   Carousel,
@@ -12,20 +11,19 @@ import { HeartIcon, PackagePlusIcon } from "lucide-react";
 
 export default function Skateboards() {
   return (
-    <section className="w-full h-[100vh] bg-background relative mx-auto px-4 py-8">
-      <h2 className="text-7xl text-gradient font-[400] text-center w-full leading-[1.2] font-poppinsBold">
+    <section className="w-full h-[100vh] bg-background relative mx-auto px-4 py-8 center-col">
+      <h2 className="text-7xl text-gradient font-[400] text-center w-auto leading-[1.2] font-poppinsBold">
         Skateboards
       </h2>
       <p className="font-poppinsLight leading-[2.5] text-center w-full">
-        Descubra todos os nossas artes de skateboards, veja as ofertas e
-        promoções.
+        Está com preguiça de criar um skate? confira nossos skates montados!
       </p>
       <Carousel
         opts={{
           align: "start",
           active: true,
         }}
-        className="w-[85%] mx-auto"
+        className="w-[85%] mx-auto mt-10"
       >
         <CarouselPrevious className="border border-solid border-gray-700 h-[90px] w-[90px] hover:border-primary hover:bg-white hover:text-primary z-20 !bg-white" />
         <CarouselContent className="w-[100%] -ml-3">
@@ -35,7 +33,7 @@ export default function Skateboards() {
                 <img
                   src={skateboard.image}
                   alt={skateboard.name}
-                  className="h-[300px] object-cover rounded-lg scale-[1.9] transition-all rotate-45"
+                  className="h-[300px] object-cover rounded-lg scale-[1.4] transition-all rotate-45"
                 />
                 <div className="content w-[90%] mx-auto px-3 py-2 pt-8">
                   <h3 className="text-5xl font-[900] secondarytext-gradient mt-2 text-center max-w-[100%] mx-auto">

@@ -23,6 +23,14 @@
     display: inline-block;
   }
 
+  .title-gradient {
+    background: radial-gradient(circle, #813dff, #4033ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+
   .secondarytext-gradient {
     background: radial-gradient(
       circle,
