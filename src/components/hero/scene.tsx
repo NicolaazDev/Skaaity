@@ -44,7 +44,7 @@ const ThreeScene = () => {
   }, [positionX]);
 
   return (
-    <div className="fixed top-0 w-[100vw] h-[100vh] left-0 z-[9999999999]">
+    <div className="fixed top-0 w-[100vw] h-[100vh] left-0 z-[99999999999999]">
       <Canvas
         style={{ position: "absolute", overflowY: "hidden" }}
         className="max-w-screen"
