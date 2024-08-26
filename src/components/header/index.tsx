@@ -7,6 +7,7 @@ import "./header.css";
 import SearchTrigger from "@/components/header/searchTrigger";
 import CartButton from "@/components/header/cartButton";
 import UserAvatar from "@/components/header/userAvatar";
+import { Separator } from "../ui/separator";
 
 export default function Header() {
   const [showHeader, setShowHeader] = useState(true);
@@ -16,10 +17,8 @@ export default function Header() {
     const currentScrollY = window.scrollY;
 
     if (currentScrollY > lastScrollY && currentScrollY > 100) {
-      // Scroll para baixo
       setShowHeader(false);
     } else {
-      // Scroll para cima
       setShowHeader(true);
     }
 
@@ -35,7 +34,7 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 h-[80px] z-[999999999999] bg-background w-full !justify-between px-8 center transition-transform duration-300 ${
+      className={`fixed top-0 h-[80px] z-[999999999999] bg-transparent w-full !justify-between px-8 center transition-transform duration-300 ${
         showHeader ? "translate-y-0" : "-translate-y-full"
       }`}
     >
@@ -46,10 +45,10 @@ export default function Header() {
           alt="logo"
         />
       </Link>
-      <nav className="flex space-x-4">
+      <nav className="flex space-x-4 bg-background p-2 rounded-[8px]">
         <SearchTrigger />
         <CartButton />
-        <div className="separator"></div>
+        <Separator orientation="vertical" className="h-12" />
         <UserAvatar />
       </nav>
     </header>

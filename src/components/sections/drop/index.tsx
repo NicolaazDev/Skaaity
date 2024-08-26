@@ -10,7 +10,7 @@ export default function DropSection() {
           className="absolute right-0 rotate-12 h-[450px] translate-y-[-15%] opacity-70"
           src="https://res.cloudinary.com/dmceve2cp/image/upload/v1724610826/Design_sem_nome-removebg-preview_xnyruz.png"
         />
-        <h2 className="text-3xl z-10 title-gradient font-bold tracking-wide">
+        <h2 className="text-3xl z-10 title-gradient font-bold font-poppinsBold tracking-wide">
           Garanta nosso Drop <br />
           antes de todo mundo
         </h2>

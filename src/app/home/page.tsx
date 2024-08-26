@@ -10,11 +10,11 @@ import Track from "@/components/sections/track";
 import Skateboards from "@/components/sections/skates";
 import Acessories from "@/components/sections/acessories";
 import DropSection from "@/components/sections/drop";
+import Footer from "@/components/sections/footer";
 
 export default function Home() {
   return (
     <main>
-      <Header />
       <Hero />
 
       <div className="relative layout -mt-[30vh] z-[99999999999] bg-background">
@@ -24,8 +24,10 @@ export default function Home() {
         <Acessories />
         <DropSection />
         <Skateboards />
+        <Footer />
       </div>
       <CookiesAllow />
+      <Header />
     </main>
   );
 }
