@@ -15,6 +15,7 @@ import Footer from "@/components/sections/footer";
 export default function Home() {
   return (
     <main>
+      <Header />
       <Hero />
 
       <div className="relative layout -mt-[30vh] z-[99999999999] bg-background">
@@ -27,7 +28,6 @@ export default function Home() {
         <Footer />
       </div>
       <CookiesAllow />
-      <Header />
     </main>
   );
 }
