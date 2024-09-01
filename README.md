@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Skaaity - Ecommerce de Skates
 
-## Getting Started
+Skaaity é uma plataforma de ecommerce especializada em skates, construída com tecnologias modernas para proporcionar uma experiência de compra imersiva e fluida.
 
-First, run the development server:
+## Tecnologias Utilizadas
+
+- **Next.js**: Framework React para renderização do lado do servidor e geração de sites estáticos.
+- **Three.js**: Biblioteca JavaScript para criação de gráficos 3D no navegador.
+- **Next-Auth**: Solução de autenticação para Next.js.
+- **Cookies**: Utilizados para gerenciamento de sessões e preferências do usuário.
+- **GSAP (GreenSock Animation Platform)**: Biblioteca para animações de scroll suaves e responsivas.
+- **Framer Motion**: Biblioteca de animações para React.
+- **Tailwind CSS**: Framework CSS utilitário para design rápido e responsivo.
+- **Context API**: Gerenciamento de estado global da aplicação React.
+
+## Funcionalidades
+
+- Visualização 3D de produtos
+- Autenticação de usuários
+- Animações de interface do usuário fluidas
+- Design responsivo
+- Gerenciamento de carrinho de compras
+- Catálogo de produtos dinâmico
+
+## Screenshots
+
+![Screenshot 1](https://res.cloudinary.com/dmceve2cp/image/upload/v1725159116/imagem_2024-08-31_235152645_dvsada.png)
+![Screenshot 2](https://res.cloudinary.com/dmceve2cp/image/upload/v1725159134/imagem_2024-08-31_235211663_txmcha.png)
+![Screenshot 2](https://res.cloudinary.com/dmceve2cp/image/upload/v1725159172/imagem_2024-08-31_235249805_ib5zdi.png)
+
+## Instalação
 
 ```bash
+# Clone o repositório
+git clone https://github.com/NicolaazDev/Skaaity.git
+
+# Entre no diretório do projeto
+cd skaaity
+
+# Instale as dependências
+npm install
+
+# Inicie o servidor de desenvolvimento
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Configuração
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Crie um arquivo `.env.local` na raiz do projeto e adicione as variáveis de ambiente necessárias:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```
+NEXTAUTH_URL=http://localhost:3000
+NEXTAUTH_SECRET=sua_chave_secreta
+# Adicione outras variáveis de ambiente conforme necessário
+```
 
-## Learn More
+2. Configure as opções de autenticação no arquivo `pages/api/auth/[...nextauth].js`.
 
-To learn more about Next.js, take a look at the following resources:
+## Contribuição
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Contribuições são bem-vindas! Por favor, leia o arquivo CONTRIBUTING.md para detalhes sobre nosso código de conduta e o processo para enviar pull requests.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Licença
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Este projeto está licenciado sob a Licença MIT - veja o arquivo LICENSE.md para detalhes.

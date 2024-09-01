@@ -1,3 +1,5 @@
+"use client";
+
 import React, {
   createContext,
   useContext,
@@ -13,6 +15,7 @@ import { clearCart as clearCartService } from "@/services/cart/clearCart";
 export interface CartItem {
   id: string;
   name: string;
+  image: string;
   price: number;
   quantity: number;
 }
@@ -22,12 +25,15 @@ interface CartContextType {
   addToCart: (item: CartItem) => void;
   removeFromCart: (id: string) => void;
   clearCart: () => void;
+  openCart: boolean;
+  setOpenCart: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
 
 export const CartProvider = ({ children }: { children: ReactNode }) => {
   const [cart, setCart] = useState<CartItem[]>([]);
+  const [openCart, setOpenCart] = useState(false);
 
   useEffect(() => {
     const storedCart = localStorage.getItem("cart");
@@ -54,7 +60,14 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
 
   return (
     <CartContext.Provider
-      value={{ cart, addToCart, removeFromCart, clearCart }}
+      value={{
+        cart,
+        addToCart,
+        removeFromCart,
+        clearCart,
+        openCart,
+        setOpenCart,
+      }}
     >
       {children}
     </CartContext.Provider>

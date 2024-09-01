@@ -34,7 +34,7 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 h-[80px] z-[999999999999] bg-background w-full !justify-between px-8 center transition-transform duration-300 ${
+      className={`fixed top-0 h-[80px] z-[9999999] bg-transparent w-full !justify-between px-8 center transition-transform duration-300 ${
         showHeader ? "translate-y-0" : "-translate-y-full"
       }`}
     >

@@ -15,12 +15,12 @@ export default function CookiesAllow() {
   }, []);
 
   const handleAccept = () => {
-    // localStorage.setItem("cookieConsent", "true");
+    localStorage.setItem("cookieConsent", "true");
     setIsVisible(false);
   };
 
   const handleDecline = () => {
-    // localStorage.setItem("cookieConsent", "false");
+    localStorage.setItem("cookieConsent", "false");
     setIsVisible(false);
   };
 

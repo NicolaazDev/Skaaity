@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "../styles/globals.css";
 import { SessionProvider } from "next-auth/react";
+import { CartProvider } from "@/context/cartContext";
+import { CartSheet } from "@/components/cartSheet";
 
 export const metadata: Metadata = {
   title: "777 Bet",
@@ -15,7 +17,12 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className="font-poppinsMedium overflow-x-hidden">
-        <SessionProvider>{children}</SessionProvider>
+        <CartProvider>
+          <SessionProvider>
+            <CartSheet />
+            {children}
+          </SessionProvider>
+        </CartProvider>
       </body>
     </html>
   );
