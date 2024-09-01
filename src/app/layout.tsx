@@ -5,8 +5,8 @@ import { CartProvider } from "@/context/cartContext";
 import { CartSheet } from "@/components/cartSheet";
 
 export const metadata: Metadata = {
-  title: "777 Bet",
-  description: "Best betting casine",
+  title: "Skaaity - Sua loja de skates",
+  description: "Skaaity - Sua loja de skates",
 };
 
 export default function RootLayout({
@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className="font-poppinsMedium overflow-x-hidden">
+      <body className="font-poppinsMedium overflow-x-hidden overflow-hidden">
         <CartProvider>
           <SessionProvider>
             <CartSheet />
